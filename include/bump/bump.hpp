@@ -29,7 +29,7 @@ struct Box2d {
      * @param margin to extend this box's dimensions at both ends
      * @return true if the boxes intersect, false otherwise
      */
-    bool intersects(const Box2d other, double margin = 0.0) const;
+    bool intersects(const Box2d& other, double margin = 0.0) const;
 };
 
 namespace utils

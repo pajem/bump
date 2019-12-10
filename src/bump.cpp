@@ -30,7 +30,7 @@ Vector2d Vector2d::operator/(double divisor) const
     return {this->x / divisor, this->y / divisor};
 }
 
-bool Box2d::intersects(const Box2d other, double margin) const
+bool Box2d::intersects(const Box2d& other, double margin) const
 {
     // reference implementation from
     // https://www.jkh.me/files/tutorials/Separating%20Axis%20Theorem%20for%20Oriented%20Bounding%20Boxes.pdf
