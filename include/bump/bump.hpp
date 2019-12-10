@@ -4,8 +4,8 @@
 namespace bump
 {
 struct Vector2d {
-    double x;
-    double y;
+    double x = 0.0;
+    double y = 0.0;
 
     /**
      * @brief Vector arithmetic.
@@ -18,9 +18,9 @@ struct Vector2d {
 };
 
 struct Box2d {
-    Vector2d center;     // center of the box
-    Vector2d dim;        // dimensions x & y
-    double orientation;  // orientation from x-axis in radians
+    Vector2d center;           // center of the box
+    Vector2d dim;              // dimensions x & y
+    double orientation = 0.0;  // orientation from x-axis in radians
 
     /**
      * @brief Check intersection with another 2D box.
