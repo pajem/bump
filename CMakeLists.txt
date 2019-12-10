@@ -44,3 +44,9 @@ install(EXPORT ${PROJECT_NAME}Targets
 install(FILES ${EXPORT_CONFIG_FILE}
     DESTINATION ${EXPORT_CONFIG_INSTALL_DIR}
 )
+
+# test
+if(WITH_TEST)
+    enable_testing()
+    add_subdirectory(test)
+endif()
