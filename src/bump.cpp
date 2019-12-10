@@ -49,7 +49,7 @@ bool Box2d::intersects(const Box2d& other, double margin) const
     // check if the candidate axis is a separating axis
     auto isAxisSeparating = [&](const Vector2d& axis) {
         Vector2d centerToCenter = other.center - this->center;
-        double centerToCenterProj = centerToCenter.dot(axis);
+        double centerToCenterProj = std::abs(centerToCenter.dot(axis));
 
         double thisHalfDimX = (this->dim.x / 2.0) + margin;
         double thisHalfDimY = (this->dim.y / 2.0) + margin;
